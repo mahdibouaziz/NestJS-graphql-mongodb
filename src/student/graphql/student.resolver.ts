@@ -14,6 +14,11 @@ export class StudentResolver {
     return this.studentService.getStudents();
   }
 
+  @Query((returns) => StudentType)
+  student(@Args('id') id: string): Promise<Student> {
+    return this.studentService.getStudent(id);
+  }
+
   @Mutation((returns) => StudentType)
   createStudent(
     @Args('createStudentInput') studentInput: CreateStudentInput,

@@ -16,6 +16,14 @@ export class StudentService {
     private readonly studentRepository: Repository<Student>,
   ) {}
 
+  async getStudent(id: string): Promise<Student> {
+    try {
+      return await this.studentRepository.findOne({ id });
+    } catch (error) {
+      throw new NotFoundException('Cannot found this student');
+    }
+  }
+
   async getStudents(): Promise<Student[]> {
     try {
       return await this.studentRepository.find();
