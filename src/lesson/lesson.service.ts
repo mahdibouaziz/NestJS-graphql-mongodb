@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Lesson } from './lesson.entity';
+import { Lesson } from './entities/lesson.entity';
 import { v4 as uuidv4 } from 'uuid';
 import { CreateLessonInput } from './dto/lesson.input';
 

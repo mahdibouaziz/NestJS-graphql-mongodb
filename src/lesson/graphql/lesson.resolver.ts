@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { CreateLessonInput } from './dto/lesson.input';
-import { Lesson } from './lesson.entity';
-import { LessonService } from './lesson.service';
+import { CreateLessonInput } from '../dto/lesson.input';
+import { Lesson } from '../entities/lesson.entity';
+import { LessonService } from '../lesson.service';
 import { LessonType } from './lesson.type';
 
 @Resolver((of) => LessonType)
